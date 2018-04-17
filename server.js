@@ -15,9 +15,8 @@ app.get('/', (req, res) => {
 var mysql      = require('mysql');
  var connection = mysql.createConnection({
     host: 'shn.world',
-    port: '3306',
     user: 'shnwo2bp_Admin',
-    password: '\$hnCM2018',
+    password: '$hnCM2018',
     database: 'shnwo2bp_SHN'
  });
 
