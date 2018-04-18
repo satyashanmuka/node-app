@@ -1,4 +1,4 @@
-'use strict';
+/*'use strict';
 
 const express = require('express');
 
@@ -24,7 +24,7 @@ var mysql      = require('mysql');
 
  connection.query('SELECT * from SHN_Leads', function(err, rows, fields) {
     if (!err)
-     console.log('The solution is: ', rows);
+     console.log('The solution is: ');
    else
      console.log('Error while performing Query.' + err);
  });
@@ -35,3 +35,14 @@ var mysql      = require('mysql');
 
 app.listen(PORT, HOST);
 console.log(`Running on http://${HOST}:${PORT}`);
+*/
+
+var express = require('express');
+var app = express();
+
+var keepmeupdated = require('./controllers/KeepMeUpdated');
+
+//both index.js and things.js should be in same directory
+app.use('/KeepMeUpdated', keepmeupdated);
+
+app.listen(3001);
