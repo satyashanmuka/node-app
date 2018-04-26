@@ -1,16 +1,6 @@
-'use strict';
+var express = require('express');
+var app = express();
+var keepmeupdated = require('./controllers/KeepMeUpdated');
 
-const express = require('express');
-
-// Constants
-const PORT = 8080;
-const HOST = '0.0.0.0';
-
-// App
-const app = express();
-app.get('/', (req, res) => {
-  res.send('Hello world\n');
-});
-
-app.listen(PORT, HOST);
-console.log(`Running on http://${HOST}:${PORT}`);
+app.use('/KeepMeUpdated', keepmeupdated);
+app.listen(3001);
