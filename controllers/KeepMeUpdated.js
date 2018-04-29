@@ -8,10 +8,10 @@ var app = express();
 
 // Configure MySQL connection
 var connection = mysql.createConnection({
-  host: 'shn.world',
-  user: 'shnwo2bp_Admin',
-  password: '$hnCM2018',
-  database: 'shnwo2bp_SHN'
+  host: 'asdf',
+  user: 'asdfn',
+  password: 'asdf',
+  database: 'asdfsd'
 });
 
 //Establish MySQL connection
